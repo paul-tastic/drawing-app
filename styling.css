@@ -1,0 +1,109 @@
+/* main page styling */
+
+body {
+    text-align: center;
+    background: url('images/background.jpg') center center fixed;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+#header {
+    background-color: rgba(255,255,255, 0.4);
+    border-radius: 10px;
+    height: 70px;
+    width: 500px;
+    margin: 5px auto;
+}
+#header h2 {
+    font-size: 3em;
+    color: black;
+    opacity: 1.0;
+    line-height: 60px;
+}
+
+/* controls styling  */
+
+#inputContainer {
+    width: 200px;
+    margin: 5px auto;
+}
+
+.inputs {
+    height: 30px;
+    font-size: 1.3em;
+}
+
+#circle {
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    background-color: black;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+#brushSize {
+    position: relative;
+}
+
+#slider {
+    margin: 5px auto;
+}
+
+/* container/canvas styling */
+
+#canvasContainer {
+    width: 500px;
+    height: 380px;
+    border: 1px solid grey;
+    margin: 5px auto;
+}
+
+#buttonContainer {
+    width: 399px;
+    height: 50px;
+    margin: 5px auto;
+}
+
+.buttonRow {
+   width: 133px;
+   color: black;
+   margin-top: 5px;
+   float: left;
+}
+
+.button {
+    background-color: white;
+    height: 20px;
+    padding: 10px;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+}
+
+.button:hover {
+    color: #fff;
+    background-color: aquamarine;
+}
+
+.button:active {
+    top: 4px;
+}
+
+#paint {
+    background-color: white;
+    cursor: crosshair;
+}
+
+.eraseSelected {
+    background-color: blue;
+    color: white;
+}

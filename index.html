@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>DrawMe!</title>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="styling.css">
+    </head>
+    <body>
+        <div id="header">
+            <h2>drawMe</h2>
+        </div>
+        <div id="inputContainer">
+            <div id="colorInput" class="inputs">
+                <input id="brushColor" type="color" list>
+            </div>
+
+            <div id="brushSize" class="inputs">
+                <div id="circle"></div>
+            </div>
+
+            <div id="sizeInput" class="inputs">
+                <div id="slider"></div>
+                    
+            </div>
+
+        </div> <!-- inputContainer -->
+
+        <div id="canvasContainer">
+            <canvas id="paint" width="500px" height="380px"></canvas>
+        </div>
+
+        <div id="buttonContainer">
+            <div class="buttonRow">
+                <span id="erase" class="button">Erase</span>
+            </div>
+            <div class="buttonRow">
+                <span id="save" class="button">Save</span>
+            </div>
+            <div class="buttonRow">
+                <span id="reset" class="button">Reset</span>
+            </div>
+        </div>
+    
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="javascript.js"></script>
+    </body>
+
+</html>
