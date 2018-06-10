@@ -17,6 +17,13 @@ $(function(){
     var mouse = {x: 0, y: 0};
 
     //load from local storage
+    if(localStorage.getItem("drawingCanvas") != null) {
+        var img = new Image();
+        img.onload = function() {
+            context.drawImage(img, 0, 0);
+        }
+        img.src = localStorage.getItem("drawingCanvas");
+    }
 
     // drawing parameters
     context.lineWidth = 3;
@@ -24,7 +31,6 @@ $(function(){
     context.lineJoint = "round";
 
     // on click
-    
     canvasContainer.mousedown(function(e){
         // set brushdown to true
         brushdown = true;
@@ -41,7 +47,7 @@ $(function(){
         if (brushdown == true) {
             if(paintNotErase) {
                 // painting, set paramaters of brush
-                context.strokeStyle = "blue";
+                context.strokeStyle = $("#brushColor").val();
         } else {
             // erasing, so set color to white
             context.strokeStyle = "white";
@@ -60,18 +66,46 @@ $(function(){
     });
     
 $("#erase").click(function(){
-    $("#erase").toggleClass("eraseSelected")
+    $("#erase").toggleClass("eraseSelected")                       
     paintNotErase = !paintNotErase;
 });
 
-// reset canvas
+// reset button
 $("#reset").click(function(){
     context.clearRect(0, 0, canvas.width, canvas.height);
     paintNotErase = true;
     $("#erase").removeClass('eraseSelected');
 });
 
-// save
+// save button
+$("#save").click(function(){
+        //does browser support local storage
+        if(typeof(localStorage) != null) {
+            // store data
+            localStorage.setItem("drawingCanvas", canvas.toDataURL());
+            // flash "saved" modal
+        } else {
+            window.alert('Your browser does not support saving the drawing');
+        }
+});
+
+// change brush size
+$("#slider").slider({
+    min: 3,
+    max: 30,
+    slide: function(event, ui) {
+        $("#circle").height(ui.value);
+        $("#circle").width(ui.value);
+        context.lineWidth = ui.value;
+    }
+});
+
+// change color
+$("#brushColor").change(function(){
+    $("#circle").css("background-color", $(this).val());
+
+})
+
 
 
 }); //IIFE
