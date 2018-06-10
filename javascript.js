@@ -64,10 +64,12 @@ $(function(){
     canvasContainer.mouseleave(function(e){
         brushdown = false;
     });
-    
+
+    // erase button
 $("#erase").click(function(){
     $("#erase").toggleClass("eraseSelected")                       
     paintNotErase = !paintNotErase;
+    $("#circle").toggleClass("circleEraseSelected");
 });
 
 // reset button
@@ -103,7 +105,6 @@ $("#slider").slider({
 // change color
 $("#brushColor").change(function(){
     $("#circle").css("background-color", $(this).val());
-
 })
 
 

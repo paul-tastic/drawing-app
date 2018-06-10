@@ -1,6 +1,7 @@
 /* main page styling */
 
 body {
+    font-family: 'PT Sans', sans-serif;
     text-align: center;
     background: url('images/background.jpg') center center fixed;
     background-size: cover;
@@ -23,9 +24,13 @@ body {
 
 /* controls styling  */
 
-#inputContainer {
-    width: 200px;
+#controlsContainer {
+    width: 150px;
+    float: left;
+    background-color: rgba(255,255,255, 0.4);
+    border-radius: 10px;
     margin: 5px auto;
+    padding: 10px;
 }
 
 .inputs {
@@ -106,4 +111,8 @@ body {
 .eraseSelected {
     background-color: blue;
     color: white;
+}
+
+.circleEraseSelected {
+    background-color: white !important;
 }

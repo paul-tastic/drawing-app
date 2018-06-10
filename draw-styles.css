@@ -1,0 +1,106 @@
+/* main page styling */
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+    background: url('images/background.jpg') center center fixed;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+#top-row {
+    background-color: pink;
+}
+
+#header h1 {
+    text-shadow: 1px 1px rgb(16, 16, 34);
+    font-weight: bold;
+    color: rgb(231, 4, 4);
+    line-height: 70px;
+   
+}
+
+.hideMe {
+    visibility: hidden;
+}
+
+#status-alert {
+    width: 50%;
+    margin: 10px auto 20px auto;
+}
+
+#page-content {
+    clear: both;
+}
+
+/* controls styling  */
+
+.inputs {
+    height: 30px;
+    font-size: 1.3em;
+}
+
+.menu-words {
+    margin-top: 5px;
+    text-shadow: 1px, 1px, grey;
+    color: white;
+}
+
+#circle {
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    background-color: #000000;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+#brushSize {
+    position: relative;
+}
+
+#slider {
+    margin: 10px auto;
+}
+
+/* container/canvas styling */
+
+
+#buttons {
+    margin-top: 60%;
+}
+
+#paint {
+    background-color: white;
+    cursor: crosshair; 
+}
+
+.eraseSelected {
+    background-color: #006dcc;
+    color: white;
+}
+
+.circleEraseSelected {
+    background-color: white !important;
+    border: 1px solid grey;
+}
+
+
+#controlsColumn {
+    background-color: rgba(133, 66, 4, 0.788);
+    border-radius: 10px;
+}
+
+#canvasContainer {
+    background-color: pink;
+    padding: 0;
+    width: 100vh;
+    height: 80vh;
+}
