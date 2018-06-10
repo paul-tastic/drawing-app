@@ -8,6 +8,11 @@ body {
     margin: 0 auto;
 }
 
+footer {
+    margin-top: 10px;
+    float: right;
+}
+
 #top-row {
     background-color: pink;
 }
